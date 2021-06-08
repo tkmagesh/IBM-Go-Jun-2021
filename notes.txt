@@ -97,3 +97,9 @@ Data Types in Go
 
 Assignment : 1
     Write program that prints the first 10 prime number from 2
+
+
+Higher Order Functions
+    Functions as data
+    1. Functions can be assigned to variables
+    2. Functions can be passed as arguments to other functions
