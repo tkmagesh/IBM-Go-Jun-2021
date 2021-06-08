@@ -3,7 +3,30 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(add(100, 200))
+	/*
+		loggerAdd := func(x, y int) int {
+			fmt.Printf("Begin operation with x = %d and y = %d\n", x, y)
+			result := add(x, y)
+			fmt.Printf("Operation result = %d\n", result)
+			fmt.Println("End peration")
+			return result
+		}
+		fmt.Println(loggerAdd(100, 200))
+
+		loggerSubtract := func(x, y int) int {
+			fmt.Printf("Begin operation with x = %d and y = %d\n", x, y)
+			result := subtract(x, y)
+			fmt.Printf("Operation result = %d\n", result)
+			fmt.Println("End peration")
+			return result
+		}
+		fmt.Println(loggerSubtract(100, 200))
+	*/
+	loggerAdd := loggerOperation(add)
+	loggerSubtract := loggerOperation(subtract)
+
+	fmt.Println(loggerAdd(100, 200))
+	fmt.Println(loggerSubtract(100, 200))
 	/*
 		the above should print the follwing
 		------
@@ -12,6 +35,16 @@ func main() {
 		End peration
 		300
 	*/
+}
+
+func loggerOperation(operation func(x, y int) int) func(x, y int) int {
+	return func(x, y int) int {
+		fmt.Printf("Begin operation with x = %d and y = %d\n", x, y)
+		result := operation(x, y)
+		fmt.Printf("Operation result = %d\n", result)
+		fmt.Println("End peration")
+		return result
+	}
 }
 
 /* The below function code is not accessible to you */
