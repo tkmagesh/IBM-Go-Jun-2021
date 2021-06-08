@@ -1,0 +1,66 @@
+Magesh Kuppan
+
+Schedule
+Commence    : 9:30 
+Tea break   : 11:30 (20 mins)
+Lunch Break : 13:00 (1 hr)
+Commence    : 14:00
+Tea Break   : 15:30 (20 mins)
+Wind up     : 17:30
+
+Name
+Experience
+Primary Skillset
+Experience in Go (if any)
+Any book you read recently / Any shows or movies you watched recently ( it has be interesting)
+
+
+Not a nice man to know (B)
+Designing Data Intensive Applications (B)
+Cinnoman Gardens (B)
+
+Expanse (V) (Prime)
+777 Charlie (V)
+Schitt's Creek (V)
+The Last World (V)
+
+
+C
+C++
+Python
+Ruby (1993)
+JavaScript (1995)
+Java (1995)
+C# (1998)
+Golang (2008)
+
+The Paradox of Choice (Barry Schwartz) (TED )
+
+Why?
+    Performance (Runtime)
+    Easy to learn
+    Community Support
+    Concurrency friendly (better performance, better memory footprint)
+
+    Simplicity
+        - 25 keywords
+        - package, import, var, func, return, if, for, switch, select, range, chan, close, defer, go, type, interface, struct, make
+        - NO list
+            no classes
+            no inheritance (prefer composition over inheritance)
+            no access modifiers
+            no generics
+
+    Built for concurrency
+        Concurrency features are built in the language
+            go, chan (built in DATA TYPE), range, select 
+        Builtin Scheduler 
+        1000s of goroutines using 1 thread (extremely memory effiencient when compared the traditional multi threading techniques)
+
+golang.org
+
+go version
+Visual Studio Code / goland (licensed)
+http://code.visualstudio.com
+
+Cmd/Ctrl + Shift + P
