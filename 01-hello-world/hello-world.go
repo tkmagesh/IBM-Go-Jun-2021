@@ -61,7 +61,10 @@ func main() {
 
 	//the following syntax is applicable only in a function (not at the package level)
 	message, name := "Hello", "Magesh"
-	fmt.Println(message, name)
+	greet(message, name)
 }
 
 //other functions
+func greet(msg string, name string) {
+	fmt.Println(msg, name)
+}

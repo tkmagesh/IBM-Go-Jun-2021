@@ -63,4 +63,34 @@ go version
 Visual Studio Code / goland (licensed)
 http://code.visualstudio.com
 
-Cmd/Ctrl + Shift + P
+Data Types in Go
+
+    bool
+    string
+
+    int
+    int8
+    int16
+    int32
+    int64
+
+    uint
+    unit8
+    uint16
+    uint32
+    uint64
+
+    float32
+    float64
+
+    complex64 (real float32, imaginary float32)
+    complex128 (real float64, imaginary float64)
+
+    byte (alias for unit8)
+    rune (alias for int32, represents 1 unicode character)
+
+    complex types
+    =============
+        Array
+        Slice
+        Map
