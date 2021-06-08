@@ -1,2 +1,8 @@
 1. Write program that prints the first 10 prime number from 2
 2. Refactor the above problem solution using functions
+3. Write a program that will print the following menu and behave accordingly
+    1. add
+    2. subtract
+    3. multiply
+    4. divide
+    5. exit
