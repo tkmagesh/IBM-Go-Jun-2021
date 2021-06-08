@@ -3,7 +3,6 @@ package main
 import "fmt"
 
 func main() {
-
 	var fn func() = func() {
 		fmt.Println("fn is invoked")
 	}
@@ -17,10 +16,29 @@ func main() {
 
 	execute(fn)
 
+	adder := getAdder()
+	fmt.Println(adder(1000, 2000))
+
+	adderFor100 := getAdderFor(100)
+	fmt.Println(adderFor100(200))
 }
 
-func execute(fn func()) {
+func execute(f func()) {
 	fmt.Println("Start : Invoking the given function")
-	fn()
+	f()
 	fmt.Println("End : Invoking the given function")
+}
+
+func getAdder() func(int, int) int {
+	add := func(x int, y int) int {
+		return x + y
+	}
+	return add
+}
+
+func getAdderFor(x int) func(int) int {
+	add := func(y int) int {
+		return x + y
+	}
+	return add
 }
