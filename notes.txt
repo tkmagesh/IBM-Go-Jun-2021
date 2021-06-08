@@ -50,6 +50,9 @@ Why?
             no inheritance (prefer composition over inheritance)
             no access modifiers
             no generics
+            no exceptions  (only errors)
+            no try catch finally
+            no function overloading
 
     Built for concurrency
         Concurrency features are built in the language
