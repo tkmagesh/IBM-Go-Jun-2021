@@ -22,11 +22,11 @@ func main() {
 		}
 		fmt.Println(loggerSubtract(100, 200))
 	*/
-	loggerAdd := loggerOperation(add)
-	loggerSubtract := loggerOperation(subtract)
+	add := loggerOperation(add)
+	subtract := loggerOperation(subtract)
 
-	fmt.Println(loggerAdd(100, 200))
-	fmt.Println(loggerSubtract(100, 200))
+	fmt.Println(add(100, 200))
+	fmt.Println(subtract(100, 200))
 	/*
 		the above should print the follwing
 		------
