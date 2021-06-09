@@ -16,7 +16,7 @@ func main() {
 	fmt.Println(x, y) //= > should print 20, 10
 
 	nos := []int{10, 20, 30}
-	addValue( /*  */ )
+	addValue(&nos, 40)
 	fmt.Println(nos) //=> [10,20,30,40]
 }
 
@@ -28,6 +28,6 @@ func swap(xPtr, yPtr *int) {
 	*xPtr, *yPtr = *yPtr, *xPtr
 }
 
-func addValue( /*  */ ) {
-
+func addValue(nos *[]int, no int) {
+	*nos = append(*nos, no)
 }
