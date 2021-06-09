@@ -28,7 +28,8 @@ func main() {
 	//p := Product{100, "Pen", 5, 100, "Stationary"}
 
 	print(p)
-	applyDiscount(&p, 10)
+	//applyDiscount(&p, 10)
+	p.applyDiscount(10)
 	print(p)
 
 	//pp := PerishableProduct{product: Product{500, "Grapes", 50, 60, "Food"}, Expiry: "2 Days"}
@@ -42,7 +43,13 @@ func print(p Product) {
 	fmt.Printf("Id = %d, Name = %s, Cost = %v, Units = %d, Category = %s\n", p.Id, p.Name, p.Cost, p.Units, p.Category)
 }
 
+/*
 func applyDiscount(p *Product, discount float32) {
+	p.Cost = p.Cost * ((100 - discount) / 100)
+}
+*/
+
+func (p *Product) applyDiscount(discount float32) {
 	p.Cost = p.Cost * ((100 - discount) / 100)
 }
 
