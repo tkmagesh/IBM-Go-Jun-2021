@@ -89,4 +89,34 @@ func main() {
 	for idx := 0; idx < 10; idx++ {
 		fmt.Println(rand.Intn(100))
 	}
+
+	//map
+	/*
+		var cityRanks map[string]int
+		cityRanks["Udupi"] = 1
+		cityRanks["Bengaluru"] = 5
+	*/
+	cityRanks := map[string]int{
+		"Udupi":     1,
+		"Bengaluru": 5,
+	}
+	fmt.Println(cityRanks)
+
+	fmt.Println("Rank of Bengaluru => ", cityRanks["Bengaluru"])
+	//add a new item
+	cityRanks["Mysuru"] = 2
+	fmt.Println(cityRanks)
+
+	//removing an existing item
+	delete(cityRanks, "Bengaluru")
+	fmt.Println(cityRanks)
+
+	//check if a key exists
+	//cityRanks["Chennai"] = 3
+	if rank, exists := cityRanks["Chennai"]; exists {
+		fmt.Println("Rank of Chennai => ", rank)
+	} else {
+		fmt.Println("Chennai is not ranked yet!")
+	}
+
 }
