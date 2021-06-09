@@ -49,6 +49,7 @@ func applyDiscount(p *Product, discount float32) {
 }
 */
 
+//applyDiscount as a method of Product
 func (p *Product) applyDiscount(discount float32) {
 	p.Cost = p.Cost * ((100 - discount) / 100)
 }
