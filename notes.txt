@@ -106,3 +106,36 @@ Higher Order Functions
     Functions as data
     1. Functions can be assigned to variables
     2. Functions can be passed as arguments to other functions
+
+
+Modularity 
+    Modules & Packages
+
+    Before Go 1.13
+        The Application code has to be in a particular folder
+        GOPATH
+            bin
+            pkg
+            src
+                github.com
+                    tkmagesh
+                        ibm-go-jun-2021
+    
+    GOROOT
+        go tool binaries
+    GOPATH
+
+    go.mod (like package.json in javascript applications)
+        module name
+        go version
+        other third party modules
+
+    to create a module file run the following command
+        go mod init modularity-demo
+
+    to install a third party package
+        go get github.com/fatih/color
+
+    to create a build
+        go build
+        go build -o <binary_name>
