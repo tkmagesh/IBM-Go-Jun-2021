@@ -138,7 +138,10 @@ Modularity
 
     to update an existing dependency
         go get -u github.com/fatih/color
-        
+
     to create a build
         go build
         go build -o <binary_name>
+
+    to get the list of build tool chains of different OS and Architecture
+        go tool dist list
