@@ -10,13 +10,32 @@ type Product struct {
 	Category string
 }
 
+/*
+type PerishableProduct struct {
+	product Product
+	Expiry  string
+}
+*/
+type PerishableProduct struct {
+	Product
+	Expiry string
+}
+
 func main() {
 	//var p Product
 	//p := Product{}
 	p := Product{Id: 100, Name: "Pen", Cost: 5, Units: 100, Category: "Stationary"}
+	//p := Product{100, "Pen", 5, 100, "Stationary"}
+
 	print(p)
 	applyDiscount(&p, 10)
 	print(p)
+
+	//pp := PerishableProduct{product: Product{500, "Grapes", 50, 60, "Food"}, Expiry: "2 Days"}
+	//pp := PerishableProduct{Product{500, "Grapes", 50, 60, "Food"}, "2 Days"}
+	pp := NewPerishableProduct(500, "Grapes", 50, 60, "Food", "2 Days")
+	fmt.Println(pp)
+	fmt.Println("Cost of grapes => ", pp.Product.Cost)
 }
 
 func print(p Product) {
@@ -25,4 +44,8 @@ func print(p Product) {
 
 func applyDiscount(p *Product, discount float32) {
 	p.Cost = p.Cost * ((100 - discount) / 100)
+}
+
+func NewPerishableProduct(id int, name string, cost float32, units int, category string, expiry string) PerishableProduct {
+	return PerishableProduct{Product{id, name, cost, units, category}, expiry}
 }
