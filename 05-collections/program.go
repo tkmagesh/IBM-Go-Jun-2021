@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+)
 
 func main() {
 	//Array
@@ -41,12 +44,23 @@ func main() {
 		fmt.Println(newNos, nos)
 	*/
 
+	//creating a copy of an array
 	newNos := nos
 	newNos[0] = 200
 	fmt.Println(newNos, nos)
 
 	//slice
-	var names []string = []string{"Magesh", "Ramesh"}
+	//var names []string = []string{"Magesh", "Ramesh"}
+
+	/*
+		var names []string
+		names = append(names, "Magesh")
+		names = append(names, "Ramesh")
+	*/
+
+	var names []string = make([]string, 2)
+	names[0] = "Magesh"
+	names[1] = "Ramesh"
 	fmt.Println(names, len(names))
 
 	//adding new elements
@@ -71,4 +85,8 @@ func main() {
 	fmt.Println("names[1:3] => ", names[1:3])
 	fmt.Println("names[3:] => ", names[3:])
 	fmt.Println("names[:3] => ", names[:3])
+
+	for idx := 0; idx < 10; idx++ {
+		fmt.Println(rand.Intn(100))
+	}
 }

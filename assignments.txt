@@ -6,3 +6,7 @@
     3. multiply
     4. divide
     5. exit
+
+4. Create a collection of 50 random numbers
+        find out the list of prime numbers from the 50 random numbers created
+        find out the list of even numbers from the 50 random numbers created
