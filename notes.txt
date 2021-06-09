@@ -136,6 +136,9 @@ Modularity
     to install a third party package
         go get github.com/fatih/color
 
+    to update an existing dependency
+        go get -u github.com/fatih/color
+        
     to create a build
         go build
         go build -o <binary_name>
