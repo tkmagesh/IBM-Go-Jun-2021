@@ -148,3 +148,7 @@ Modularity
 
     cross compilation of the application
         GOOS=windows go build
+
+
+TODO:
+    implement the data structures in golang (stack, queue, linked list, doubly linked list, trees)

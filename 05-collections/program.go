@@ -91,15 +91,16 @@ func main() {
 	}
 
 	//map
-	/*
-		var cityRanks map[string]int
-		cityRanks["Udupi"] = 1
-		cityRanks["Bengaluru"] = 5
-	*/
-	cityRanks := map[string]int{
+
+	//var cityRanks map[string]int
+	var cityRanks = make(map[string]int, 2)
+	cityRanks["Udupi"] = 1
+	cityRanks["Bengaluru"] = 5
+
+	/* cityRanks := map[string]int{
 		"Udupi":     1,
 		"Bengaluru": 5,
-	}
+	} */
 	fmt.Println(cityRanks)
 
 	fmt.Println("Rank of Bengaluru => ", cityRanks["Bengaluru"])
