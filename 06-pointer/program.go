@@ -12,14 +12,22 @@ func main() {
 	increment(&no)
 	fmt.Println(no)
 	x, y := 10, 20
-	swap( /*  */ )
+	swap(&x, &y)
 	fmt.Println(x, y) //= > should print 20, 10
+
+	nos := []int{10, 20, 30}
+	addValue( /*  */ )
+	fmt.Println(nos) //=> [10,20,30,40]
 }
 
 func increment(x *int) {
 	*x += 1
 }
 
-func swap( /*  */ ) {
+func swap(xPtr, yPtr *int) {
+	*xPtr, *yPtr = *yPtr, *xPtr
+}
+
+func addValue( /*  */ ) {
 
 }
