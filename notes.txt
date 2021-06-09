@@ -145,3 +145,6 @@ Modularity
 
     to get the list of build tool chains of different OS and Architecture
         go tool dist list
+
+    cross compilation of the application
+        GOOS=windows go build
