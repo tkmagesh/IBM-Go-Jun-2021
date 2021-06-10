@@ -10,6 +10,7 @@ func add(x, y int, ch chan int) {
 	result := x + y
 	//write data into the channel
 	ch <- result
+	ch <- 100
 }
 
 func main() {
