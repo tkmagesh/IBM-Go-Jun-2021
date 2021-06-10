@@ -8,6 +8,9 @@ import (
 //share memory for communication
 
 func add(x, y int, ch chan int, delay time.Duration) {
+	defer func() {
+		fmt.Println("Defered from add")
+	}()
 	fmt.Println("Entering add with ", x, " and ", y)
 	result := x + y
 	//write data into the channel
