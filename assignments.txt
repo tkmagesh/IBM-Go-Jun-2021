@@ -10,3 +10,8 @@
 4. Create a collection of 20 random numbers (from 0 to 100)
         find out the list of prime numbers from the 20 random numbers created
         find out the list of even numbers from the 20 random numbers created
+
+5. Implement sort functionality for Products (07-structs)
+    HAVE TO use the sort.Sort() function
+    By default, sort the products by their id
+    Add provisions to be able to sort the products by anything (eg: name, cost, units, category)
