@@ -24,7 +24,7 @@ func sum(nos ...interface{}) int {
 		case int:
 			result += val.(int)
 		case string:
-			if x, err := strconv.Atoi(val.(string)); err != nil {
+			if x, err := strconv.Atoi(val.(string)); err == nil {
 				result += x
 			}
 		case []int:
