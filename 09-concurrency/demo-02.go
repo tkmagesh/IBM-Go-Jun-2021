@@ -13,10 +13,11 @@ func print(msg string) {
 }
 
 func main() {
-	wg.Add(2)
+	//wg.Add(2)
+	wg.Add(1)
 	go print("Hello")
+	wg.Add(1)
 	go print("World")
-	//time.Sleep(2 * time.Second)
 	wg.Wait() //wait for the internal counter to become 0
 	fmt.Println("End of main!")
 }
