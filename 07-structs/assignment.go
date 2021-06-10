@@ -24,10 +24,12 @@ func main() {
 	products[4] = Product{103, "Charger", 200, 10, "Electronics"}
 
 	stylus := Product{107, "Stylus", 200, 10, "Stationary"}
+	fmt.Println(stylus)
+
 	products.AddProduct(stylus)
 
 	fmt.Println("Initial List")
-	fmt.Println(products.Format())
+	fmt.Println(products)
 
 	fmt.Println("Index of stylus => ", products.IndexOf(stylus))
 	fmt.Println("Includes stylus ? => ", products.Includes(stylus))
@@ -43,7 +45,7 @@ func main() {
 
 	costlyProducts := products.Filter(costlyProductPredicate)
 	fmt.Println("Costly Products List")
-	fmt.Println(costlyProducts.Format())
+	fmt.Println(costlyProducts)
 }
 
 //write the functions for the following
@@ -56,14 +58,14 @@ func main() {
 	6. Filter -> return the list of products that satisfy the given condition in the products list
 */
 
-func (p Product) Format() string {
+func (p Product) String() string {
 	return fmt.Sprintf("Id = %d, Name = %s, Cost = %v, Units = %d, Category = %s\n", p.Id, p.Name, p.Cost, p.Units, p.Category)
 }
 
-func (products Products) Format() string {
+func (products Products) String() string {
 	result := ""
 	for _, product := range products {
-		result += product.Format()
+		result += fmt.Sprintf("%v", product)
 	}
 	return result
 }
