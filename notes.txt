@@ -163,3 +163,73 @@ IO operations
         manipulate files & directories
     bufio
         buffered io & for manipulating textual data
+
+
+gRPC
+    Application to Application communication
+
+    .NET
+        .NET Remoting
+            binary
+    Java
+        RMI
+
+    Web
+        IP
+        TCP
+        HTTP
+        XML
+    Web Services
+        SOAP (Simple Object Access Protocol) - XML Vocabulary for representing request & response formats
+        WSDL (Web Service Description Language) - XML Vocabulary
+
+    REST (Respresentational State Transfer)
+        Data as a Resource
+            What data ? - URL
+                http://myApp.com/products    
+            What operation ?
+                http verbs GET, POST, PUT, PATCH, DELETE, HEAD
+            Status of requested operation
+                http status codes 200, 201, 302, 403, 404, 500
+            JSON
+
+    HTTP overheads
+        Stateless protocol
+        Text
+        ONLY frequent polling to get realtime data
+
+    IT DEPENDS
+
+Product Master
+    Read Only
+    Read Optimized
+
+Reviews
+    Read Write
+    Mostly Read / Rarely Write
+
+Customers who bought this item also bought
+    Analytical 
+
+Delivery
+    Realtime
+
+
+RDBMS
+    Integrity of the data (transactional)
+
+
+gRPC
+    Language agnostic
+    protocol buffers
+        binary
+    tcp
+    communication patterns
+        request response
+        client streaming
+        server streaming
+        bidirectional streaming
+
+Toos for gRPC
+    go get -u github.com/golang/protobuf/protoc-gen-go
+    go get -u google.golang.org/grpc
