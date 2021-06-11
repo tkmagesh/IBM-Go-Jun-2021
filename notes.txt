@@ -232,7 +232,12 @@ gRPC
 
 Toos for gRPC
     go get -u github.com/golang/protobuf/protoc-gen-go
+    OR
+    brew install protobuf
+
+    
     go get -u google.golang.org/grpc
+
 
 
 to generate the proxy
@@ -245,3 +250,4 @@ Troubleshoot generating proto proxy
     export PATH="$PATH:$(go env GOPATH)/bin"
     go get -u github.com/golang/protobuf/{proto,protoc-gen-go}
     go get -u google.golang.org/grpc@latest
+
