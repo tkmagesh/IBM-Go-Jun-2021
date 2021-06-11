@@ -152,3 +152,14 @@ Modularity
 
 TODO:
     implement the data structures in golang (stack, queue, linked list, doubly linked list, trees)
+
+
+IO operations
+    io
+        foundational types (like Reader, Writer, Seeker)
+    iouitls
+        high level apis 
+    os
+        manipulate files & directories
+    bufio
+        buffered io & for manipulating textual data
