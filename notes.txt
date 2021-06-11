@@ -238,3 +238,10 @@ Toos for gRPC
 to generate the proxy
     protoc ./proto/service.proto --go_out=plugins=grpc:.
 
+    For go 1.16
+    protoc --go_out=. --go_opt=paths=source_relative \ --go-grpc_out=. --go-grpc_opt=paths=source_relative \ proto/service.proto
+
+Troubleshoot generating proto proxy
+    export PATH="$PATH:$(go env GOPATH)/bin"
+    go get -u github.com/golang/protobuf/{proto,protoc-gen-go}
+    go get -u google.golang.org/grpc@latest
