@@ -233,3 +233,8 @@ gRPC
 Toos for gRPC
     go get -u github.com/golang/protobuf/protoc-gen-go
     go get -u google.golang.org/grpc
+
+
+to generate the proxy
+    protoc ./proto/service.proto --go_out=plugins=grpc:.
+
